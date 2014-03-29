@@ -1,0 +1,75 @@
+		<%if(image !=""){%>
+			<div id="detailSearch_<%=showid%>">
+				<span id="closeSearch_<%=showid%>" class="close_<%=showid%>">X</span>
+				<div class="circle" style="background:url('<%=image%>');background-size:cover;background-position:center;"></div>
+				<input style="display:none;" class="whichGrid" type="text" value="" />
+				<form id="formSearch_<%=showid%>" >
+					<div>
+						<label for="showid"></label><input id="showid" type="text" value="<%=showid%>" />
+						<label for="name"><h3 class="title"><%=name%></h3></label><input id="name" type="text" value="<%=name%>" />
+						<label for="airtime"><h3 class="title">Air Time: <%=time%></h3></label><input id="airtime" type="text" value="<%=time%>" />
+						<label for="day"><h3 class="title">Air Day: <%=day%></h3></label><input id="day" type="text"  value=''/>
+						<%for (airdate in nextair){
+							var d = new Date(nextair[airdate]);
+							var now= new Date();
+							now.setHours(0);
+							now.setMinutes(0);
+							now.setSeconds(0);
+							now.setMilliseconds(0);
+							
+							//console.log(now);
+							//console.log(d);
+							if(d>=now){%>
+								<label for="nextair"><h3 class="title">Next Air Date: <%=nextair[airdate]%></h3></label><input id="nextair" type="text"  value="[<%=nextair%>]"/>
+							<%break;}else{
+								if(nextair[airdate] !=="November 30, -0001")
+									var lastair=nextair[airdate];
+							}
+							}%>
+							<%if(lastair!==undefined){%>
+								<label for="nextair"><h3 class="title">Last Air Date: <%=lastair%></h3></label><input id="lastair" type="text"  value=''/>
+							<%}%>
+						<label for="seasons"><h3 class="title">Total Seasons: <%=seasons%></h3></label><input id="seasons" type="text" value=''/>
+						<label for="status"><h3 class="title">Status: <%=status%></h3></label><input id="status" type="text" value=''/>
+						<label for="network"><h3 class="title">Network: <%=network%></h3></label><input id="network" type="text" value=''/>
+						<label for="image"> </label><input id="image" type="text" value='<%=image%>'/>
+						<button style="display:none;"id="removeSearch_<%=showid%>" class="remove_<%=showid%>">Unfollow</button>
+						<button id="addSearch_<%=showid%>" class="add_<%=showid%>">Follow</button>
+						
+					</div>
+				</form>
+			</div>
+						
+		<%}else{%>
+			<div id="detailSearch_<%=showid%>">
+				<span id="closeSearch_<%=showid%>" class="close_<%=showid%>">X</span>
+				<div class="circle" style="background:url('img/noimage.gif');background-size:cover;background-position:center;"></div>
+				<form id="formSearch_<%=showid%>">
+					<div>
+						<label for="showid"></label><input id="showid" type="text" value="<%=showid%>" />
+						<label for="name"><h3 class="title"><%=name%></h3></label><input id="name" type="text" value="<%=name%>" />
+						<label for="airtime"><h3 class="title">Air Time: <%=time%></h3></label><input id="airtime" type="text" value="<%=time%>" />
+						<label for="day"><h3 class="title">Air Day: <%=day%></h3></label><input id="day" type="text"  value='<%=day%>'/>
+						<%for (airdate in nextair){
+							var d = new Date(nextair[airdate]);
+							var now= new Date();
+							if(d>=now){%>
+								<label for="nextair"><h3 class="title">Next Air Date: <%=nextair[airdate]%></h3></label><input id="nextair" type="text"  value="[<%=nextair%>]"/>
+							<%break;}else{
+								if(nextair[airdate] !=="November 30, -0001")
+									var lastair=nextair[airdate];
+							}
+							}%>
+						<%if(lastair!==undefined){%>	
+							<label for="nextair"><h3 class="title">Last Air Date: <%=lastair%></h3></label><input id="lastair" type="text"  value=''/>
+						<%}%>
+						<label for="seasons"><h3 class="title">Total Seasons: <%=seasons%></h3></label><input id="seasons" type="text" value='<%=seasons%>'/>
+						<label for="network"><h3 class="title">Network: <%=network%></h3></label><input id="network" type="text" value='<%=network%>'/>
+						<label for="image"> </label><input id="image" type="text" value='img/noimage.gif'/>
+						<button style="display:none;"id="removeSearch_<%=showid%>" class="remove_<%=showid%>">Unfollow</button>
+						<button id="addSearch_<%=showid%>" class="add_<%=showid%>">Follow</button>	
+					</div>
+				</form>
+			</div>
+						
+		<%}%>

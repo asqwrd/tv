@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8"/>
+        <title>TV Schedule</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/elusive-webfont.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+		<div id="container">
+	
+			<div class="content">
+				
+				<div class="loader">
+					<div id="bowlG">
+						<div id="bowl_ringG">
+							<div class="ball_holderG">
+								<div class="ballG"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<section id="time" class="overlay overlay-contentpush">
+				<a href="#" id="notify_icon"><h3 class="icon-info-sign"></h3></a>
+				<div id="notification">
+				<a href="#" id="clear_icon"><h3 class="icon-trash">Clear</h3></a>
+				<button type="button" id="notification-close">Close</button>
+					<h1>Notifications</h1>
+					<ul id="notify"></ul>
+					<div id="empty"><h2>Your in the Clear</h2></div>
+				</div>
+				<div id="user-info2">
+							Signed in as 
+					</div>
+				<button type="button" class="overlay-close">Close</button>
+				<div id="logoG">
+						
+						<h1>TV Schedule</h1>
+						
+					</div>
+					<div id="searchDiv"></div>
+					<div id="st-accordion" class="st-accordion">
+						<ul id="times"></ul>
+					</div>
+				</section>
+				<section id="grid">
+				<header id="head">
+					<div id="user-info">
+							Signed in as 
+					</div>
+					<div id="date"></div>
+					<a href="#" id="trigger-overlay"></a>
+				</header>
+					<div id="favGrid"></div>	
+					<div id="showGrid"></div>	
+					<div id="searchGrid">
+					<div id="searchLoad">
+						<div id="bowlG">
+							<div id="bowl_ringG">
+								<div class="ball_holderG">
+									<div class="ballG"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<ul id="searchResults"></ul>
+					</div>	
+					<div id="detailResults"></div>	
+					<div id="detailSearchResults"></div>	
+				</section>
+			</div>
+		</div>
+		
+		
+        <script data-main="js/app" src="js/lib/require.js"></script>
+    </body>
+</html>

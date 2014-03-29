@@ -1,0 +1,12 @@
+Tv schedule app to learn backbone.
+
+Setup Instructions:
+Create a cronjob on your server for running the show.php and allshow.php scripts in the api folder.  These scripts pull from the feeds of tvrage.com api at http://services.tvrage.com/) and converts the xml files into json objects.
+
+I run the shows.php script everyday at 12 midnight and the allshows.php once a week on Friday Midnight.
+
+The shows.php script creates a show_dump.php file which contains the json object that the timeRoute collection uses.
+
+allshows.php creates a show_dump3.php that stores all the shows in the tvrage database into a collection of json objects for the SearchResults collection.
+
+I use parse for managing users and storing users favorite shows.

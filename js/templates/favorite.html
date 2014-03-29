@@ -1,0 +1,13 @@
+	<%for(var tag in shows) { %>
+		<%if(shows[tag].image !=""){%>
+			<li id="favi_<%=shows[tag].showid+"_"+time.replace(" ","_").replace(":","")%>">
+				<div class="circle" style="background:url('<%=shows[tag].image%>');background-size:cover;background-position:center;"></div>
+				<h3 class="title"><%=shows[tag].name%></h3>
+			</li>			
+		<%}else{%>
+			<li id="favi_<%=shows[tag].showid+"_"+time.replace(" ","_").replace(":","")%>">
+				<div class="circle" style="background:url('img/noimage.gif');background-size:cover;background-position:center;"></div>
+				<h3 class="title"><%=shows[tag].name%></h3>			
+			</li>			
+		<%}%>
+	<%}%>
