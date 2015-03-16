@@ -1,0 +1,21 @@
+{
+    "name": "TV_Schedule",
+    "author": "Bade Adebayo",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+        "start": "nodemon app.js"
+    },
+    "dependencies": {
+        "express": "~3.1.0",
+        "jade": "*",
+        "mongoose": "*",
+         "connect-mongo": "latest",
+         "connect-flash": "latest",
+         "passport": "latest",
+         "passport-local": "latest",
+         "passport-facebook": "latest",
+         "nodemon": "latest",
+         "underscore":"latest"
+    }
+}
