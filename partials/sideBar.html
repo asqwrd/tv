@@ -1,0 +1,29 @@
+<div class="dummy-sidebar">
+    <div class="checkout">
+        <a class="checkout__button" href="#">{{time_slot.time}}</a>
+        <div class="checkout__order">
+            <div class="checkout__order-inner">
+                <table class="checkout__summary">
+                    <thead>
+                    <tr><th>Your Order</th><th>Price</th></tr>
+                    </thead>
+                    <tfoot>
+                    <tr><th colspan="2">Total <span class="checkout__total">$56.20</span></th></tr>
+                    </tfoot>
+                    <tbody>
+                    <tr><td><strong>Imitations</strong> <span>Mark Lanegan</span></td><td>$9.90</td></tr>
+                    <tr><td><strong>In The Silence</strong> <span>Ásgeir</span></td><td>$5.50</td></tr>
+                    <tr><td><strong>Out Of Exile</strong> <span>Audioslave</span></td><td>$11.00</td></tr>
+                    <tr><td><strong>London</strong> <span>Frank Sinatra</span></td><td>$19.90</td></tr>
+                    <tr><td><strong>Cure For Pain</strong> <span>Morphine</span></td><td>$9.90</td></tr>
+                    </tbody>
+                </table><!-- /checkout__summary -->
+                <button class="checkout__option checkout__option--silent checkout__cancel"><i class="fa fa-angle-left"></i> Continue shopping</button><button class="checkout__option checkout__option--loud">Pay now</button>
+            </div><!-- /checkout__order-inner -->
+        </div><!-- /checkout__order -->
+    </div><!-- /checkout -->
+    <div class="feature_grid" ng-repeat="feature in time_slot_sidebar"  style="background:url({{feature.show.image}})
+    repeat center center"></div>
+
+    <div class="dummy-sidebar__overlay"></div>
+</div>

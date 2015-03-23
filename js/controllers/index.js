@@ -1,0 +1,4 @@
+define([
+    './home',
+    './schedule'
+], function () {});

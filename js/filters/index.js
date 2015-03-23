@@ -1,0 +1,3 @@
+define([
+    './my-flter',
+], function () {});
